@@ -522,6 +522,84 @@ h3 {
   font-weight: 800;
 }
 
+.about {
+  background: white;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: clamp(24px, 5vw, 58px);
+  align-items: stretch;
+}
+
+.about-list,
+.about-card {
+  margin: 0;
+  padding: clamp(24px, 4vw, 38px);
+  background: #f7f9fc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(16, 22, 35, 0.08);
+}
+
+.about-list {
+  display: grid;
+  gap: 0;
+}
+
+.about-list div {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-list div:first-child {
+  padding-top: 0;
+}
+
+.about-list div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.about-list dt {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.about-list dd {
+  margin: 0;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.about-list a,
+.about-card a:not(.button) {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.about-card {
+  background:
+    linear-gradient(140deg, rgba(31, 78, 163, 0.08), rgba(24, 151, 124, 0.08)),
+    white;
+}
+
+.about-card p:last-of-type {
+  color: var(--muted);
+}
+
+.about-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.56fr);
@@ -633,6 +711,7 @@ h3 {
 
 @media (max-width: 1020px) {
   .split,
+  .about-layout,
   .contact,
   .news-layout {
     grid-template-columns: 1fr;
@@ -802,6 +881,11 @@ h3 {
   }
 
   .calendar-panel article {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .about-list div {
     grid-template-columns: 1fr;
     gap: 4px;
   }
