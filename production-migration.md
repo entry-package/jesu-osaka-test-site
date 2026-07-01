@@ -4,10 +4,12 @@
 
 - テストサイト: https://yamaguchiy-source.github.io/jesu-osaka-test-site/
 - 本番ドメイン: https://www.jesu-osaka.jp/
-- 現行本番: Strikingly
+- 旧本番: Strikingly
 - 今回のリメイク: 静的HTML/CSS/JavaScript
 - 本番用検索設定: `index,follow` に切替済み
 - GitHub Pagesカスタムドメイン: `www.jesu-osaka.jp` 設定済み
+- DNS切替: `www.jesu-osaka.jp` を `yamaguchiy-source.github.io` へ変更済み
+- HTTPS強制: GitHub Pages証明書発行待ち
 
 ## 本番移管前に必要な確認
 
@@ -34,13 +36,13 @@
 3. 会員資料PDFを新しい保管先へ移すか決める。現行Strikingly CDNを継続利用
 4. `noindex,nofollow` を本番公開直前に外す。済み
 5. DNS切替前のバックアップを取る。済み
-6. 本番ドメイン切替を実施する。DNS管理画面で作業中
-7. スマホ、PC、フォーム、SNSカード、検索避け解除を確認する。DNS反映後に最終確認
+6. 本番ドメイン切替を実施する。済み
+7. スマホ、PC、フォーム、SNSカード、検索避け解除を確認する。HTTPS証明書発行後に最終確認
 
 ## DNS切替内容
 
 - 管理: ムームードメイン
-- 現在の `www`: Strikingly向けCNAME
-- 切替後の `www`: `yamaguchiy-source.github.io`
+- 旧 `www`: Strikingly向けCNAME
+- 現在の `www`: `yamaguchiy-source.github.io`
 - GitHub Pages側のカスタムドメイン設定: 済み
 - HTTPS強制: GitHub Pages証明書発行後に有効化する
