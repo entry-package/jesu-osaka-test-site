@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>【テスト版】お問い合わせ | 一般社団法人大阪府eスポーツ連合</title>
+    <meta name="description" content="一般社団法人大阪府eスポーツ連合へのお問い合わせページです。" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="https://www.jesu-osaka.jp/styles.css" />
+    <style>
+      .test-banner {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--red);
+        color: #fff;
+        text-align: center;
+        padding: 9px 16px;
+        font-weight: 800;
+        font-size: 0.86rem;
+        letter-spacing: 0.02em;
+      }
+      .contact-hero-section {
+        text-align: center;
+        padding: clamp(52px, 7vw, 96px) clamp(18px, 5vw, 72px) clamp(34px, 5vw, 60px);
+        background:
+          linear-gradient(120deg, rgba(245, 247, 251, 0.96), rgba(255, 255, 255, 0.82)),
+          radial-gradient(circle at 92% 12%, rgba(217, 54, 68, 0.16), transparent 30%),
+          radial-gradient(circle at 8% 92%, rgba(240, 180, 41, 0.2), transparent 32%);
+      }
+      .contact-hero-inner {
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .contact-hero-inner h1 {
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        margin-bottom: 16px;
+      }
+      .contact-hero-inner .lead {
+        margin: 0 auto;
+        color: #384456;
+      }
+      .contact-body {
+        padding-top: clamp(36px, 5vw, 60px);
+        padding-bottom: clamp(56px, 7vw, 96px);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr);
+        gap: clamp(22px, 4vw, 40px);
+        align-items: start;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+      .form-card {
+        padding: clamp(24px, 4vw, 40px);
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+      .form-card h2 {
+        font-size: clamp(1.5rem, 2.6vw, 2rem);
+      }
+      .form-card .form-lead {
+        color: var(--muted);
+      }
+      .form-cta {
+        margin: 20px 0 4px;
+      }
+      .form-embed {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+      }
+      .form-embed iframe {
+        width: 100%;
+        height: 1450px;
+        border: 0;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .form-note {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .form-note a,
+      .contact-routes a:not(.button) {
+        color: var(--blue);
+        font-weight: 800;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+      }
+      .contact-routes {
+        align-self: start;
+      }
+      .contact-routes .route-link {
+        margin-top: 4px;
+        font-weight: 900;
+        text-decoration: none;
+      }
+      @media (max-width: 1020px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-banner">テスト版・確認用ページです（未公開／関係者確認用）</div>
+    <header class="site-header">
+      <a class="brand" href="https://www.jesu-osaka.jp/" aria-label="JeSU Osaka ホーム">
+        <img src="https://www.jesu-osaka.jp/assets/logo.png" alt="JeSU Osaka" />
+        <span>
+          <strong>JeSU Osaka</strong>
+          <small>一般社団法人大阪府eスポーツ連合</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="サイト内メニュー">
+        <a href="https://www.jesu-osaka.jp/#news">新着情報</a>
+        <a href="https://www.jesu-osaka.jp/#activities">活動内容</a>
+        <a href="https://www.jesu-osaka.jp/#records">活動実績</a>
+        <a href="https://www.jesu-osaka.jp/#members">メンバー</a>
+        <a href="https://www.jesu-osaka.jp/#about">団体概要</a>
+        <a href="https://www.jesu-osaka.jp/#calendar">カレンダー</a>
+        <a href="https://www.jesu-osaka.jp/contact.html">お問い合わせ</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary>メニュー</summary>
+        <nav aria-label="スマホ用サイト内メニュー">
+          <a href="https://www.jesu-osaka.jp/#news">新着情報</a>
+          <a href="https://www.jesu-osaka.jp/#activities">活動内容</a>
+          <a href="https://www.jesu-osaka.jp/#records">活動実績</a>
+          <a href="https://www.jesu-osaka.jp/#members">メンバー</a>
+          <a href="https://www.jesu-osaka.jp/#about">団体概要</a>
+          <a href="https://www.jesu-osaka.jp/#calendar">カレンダー</a>
+          <a href="https://www.jesu-osaka.jp/contact.html">お問い合わせ</a>
+        </nav>
+      </details>
+    </header>
+
+    <main id="top">
+      <section class="contact-hero-section">
+        <div class="contact-hero-inner">
+          <p class="eyebrow">Contact</p>
+          <h1>お問い合わせ</h1>
+          <p class="lead">
+            講演・後援・イベント協力・会員・入会・取材など、eスポーツに関わるご相談を受け付けています。
+            下記フォームからお気軽にお送りください。内容を確認のうえ、担当より折り返しご連絡いたします。
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact-body">
+        <div class="contact-grid">
+          <div class="form-card">
+            <p class="eyebrow">Contact Form</p>
+            <h2>フォームでのお問い合わせ</h2>
+            <p class="form-lead">入力は1〜2分ほどで完了します。いただいた内容は担当が確認し、順次ご返信します。</p>
+            <div class="form-cta">
+              <a
+                class="button primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSenWOMQAwQ3LmaAeOj0Y-RwZd81BEXNJjSHLRvFeGaYYMpTuw/viewform"
+                target="_blank"
+                rel="noreferrer"
+              >お問い合わせフォームを開く ↗</a>
+            </div>
+            <div class="form-embed">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSenWOMQAwQ3LmaAeOj0Y-RwZd81BEXNJjSHLRvFeGaYYMpTuw/viewform?embedded=true"
+                loading="lazy"
+                title="お問い合わせフォーム"
+              >読み込んでいます…</iframe>
+            </div>
+            <p class="form-note">
+              フォームが表示されない場合は、
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSenWOMQAwQ3LmaAeOj0Y-RwZd81BEXNJjSHLRvFeGaYYMpTuw/viewform" target="_blank" rel="noreferrer">こちらから直接開いて</a>ご回答ください。
+            </p>
+          </div>
+
+          <aside class="contact-routes" aria-label="その他の窓口">
+            <article>
+              <span>Event</span>
+              <h3>イベント掲載の申込</h3>
+              <p>大阪府内で開催するeスポーツ関連イベントの掲載は、専用フォームから受け付けています。</p>
+              <a class="route-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc_2q_K6ZeWMOutHOdOrIkhJy6aw8hCsNF9WSdkwaaT2NnOoQ/viewform" target="_blank" rel="noreferrer">掲載申込フォーム →</a>
+            </article>
+            <article>
+              <span>SNS</span>
+              <h3>公式X（旧Twitter）</h3>
+              <p>最新の活動やイベント情報は、公式Xでも発信しています。</p>
+              <a class="route-link" href="https://x.com/OsakaGamers" target="_blank" rel="noreferrer">@OsakaGamers →</a>
+            </article>
+            <article>
+              <span>Docs</span>
+              <h3>会員・連携のご検討</h3>
+              <p>会員参画や後援・連携をご検討の方は、会員資料もあわせてご確認ください。</p>
+              <a class="route-link" href="https://uploads.strikinglycdn.com/files/aa9ea3ad-1e24-4c79-87ab-0af91ceecfe7/JeSU%E5%A4%A7%E9%98%AA%E8%AA%AC%E6%98%8E%E8%B3%87%E6%96%99.pdf?t=1747220049&id=4275326" target="_blank" rel="noreferrer">会員資料を見る →</a>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <img src="https://www.jesu-osaka.jp/assets/logo.png" alt="" />
+        <p>© 一般社団法人大阪府eスポーツ連合. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
