@@ -64,36 +64,60 @@
       }
       .form-card .form-lead {
         color: var(--muted);
+        margin-bottom: 26px;
       }
-      .form-cta {
-        margin: 20px 0 4px;
+      .native-form label {
+        display: block;
+        margin-bottom: 18px;
+        font-weight: 800;
+        color: var(--ink);
       }
-      .form-embed {
-        margin-top: 24px;
-        padding-top: 24px;
-        border-top: 1px solid var(--line);
+      .native-form label .req {
+        color: var(--red);
       }
-      .form-embed iframe {
+      .native-form input,
+      .native-form select,
+      .native-form textarea {
+        display: block;
         width: 100%;
-        height: 1450px;
-        border: 0;
+        margin-top: 8px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
         border-radius: 8px;
+        font: inherit;
+        font-weight: 500;
+        color: var(--ink);
         background: #fff;
       }
-      .form-note {
-        margin-top: 14px;
-        color: var(--muted);
-        font-size: 0.9rem;
+      .native-form input:focus,
+      .native-form select:focus,
+      .native-form textarea:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgba(31, 78, 163, 0.12);
       }
-      .form-note a,
+      .native-form textarea {
+        min-height: 170px;
+        resize: vertical;
+      }
+      .native-form .form-submit {
+        margin-top: 24px;
+      }
+      .native-form .hp {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+      .contact-routes {
+        align-self: start;
+      }
       .contact-routes a:not(.button) {
         color: var(--blue);
         font-weight: 800;
         text-decoration: underline;
         text-underline-offset: 0.18em;
-      }
-      .contact-routes {
-        align-self: start;
       }
       .contact-routes .route-link {
         margin-top: 4px;
@@ -156,27 +180,42 @@
         <div class="contact-grid">
           <div class="form-card">
             <p class="eyebrow">Contact Form</p>
-            <h2>フォームでのお問い合わせ</h2>
-            <p class="form-lead">入力は1〜2分ほどで完了します。いただいた内容は担当が確認し、順次ご返信します。</p>
-            <div class="form-cta">
-              <a
-                class="button primary"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSenWOMQAwQ3LmaAeOj0Y-RwZd81BEXNJjSHLRvFeGaYYMpTuw/viewform"
-                target="_blank"
-                rel="noreferrer"
-              >お問い合わせフォームを開く ↗</a>
-            </div>
-            <div class="form-embed">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSenWOMQAwQ3LmaAeOj0Y-RwZd81BEXNJjSHLRvFeGaYYMpTuw/viewform?embedded=true"
-                loading="lazy"
-                title="お問い合わせフォーム"
-              >読み込んでいます…</iframe>
-            </div>
-            <p class="form-note">
-              フォームが表示されない場合は、
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSenWOMQAwQ3LmaAeOj0Y-RwZd81BEXNJjSHLRvFeGaYYMpTuw/viewform" target="_blank" rel="noreferrer">こちらから直接開いて</a>ご回答ください。
-            </p>
+            <h2>お問い合わせフォーム</h2>
+            <p class="form-lead">下記に入力して「送信する」を押してください。担当が確認し、順次ご返信します。（<span style="color:var(--red);font-weight:800;">*</span> は必須項目）</p>
+            <form class="native-form" action="https://formsubmit.co/info@package-inc.com" method="POST">
+              <input type="hidden" name="_subject" value="【JeSU大阪サイト】お問い合わせが届きました" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://entry-package.github.io/jesu-osaka-test-site/thanks.html" />
+              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <label>お名前 <span class="req">*</span>
+                <input type="text" name="お名前" required />
+              </label>
+              <label>ご所属（会社・学校・団体名）
+                <input type="text" name="ご所属" />
+              </label>
+              <label>メールアドレス <span class="req">*</span>
+                <input type="email" name="email" required />
+              </label>
+              <label>お問い合わせの種類 <span class="req">*</span>
+                <select name="お問い合わせの種類" required>
+                  <option value="" disabled selected>選択してください</option>
+                  <option>講演・セミナーの依頼</option>
+                  <option>後援・協力の依頼</option>
+                  <option>イベント協力・機材の相談</option>
+                  <option>会員・入会について</option>
+                  <option>取材・メディア関係</option>
+                  <option>その他</option>
+                </select>
+              </label>
+              <label>お問い合わせ内容 <span class="req">*</span>
+                <textarea name="お問い合わせ内容" required></textarea>
+              </label>
+              <div class="form-submit">
+                <button type="submit" class="button primary">送信する</button>
+              </div>
+            </form>
           </div>
 
           <aside class="contact-routes" aria-label="その他の窓口">
