@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>【テスト版】お問い合わせ | 一般社団法人大阪府eスポーツ連合</title>
+    <title>お問い合わせ | 一般社団法人大阪府eスポーツ連合</title>
     <meta name="description" content="一般社団法人大阪府eスポーツ連合へのお問い合わせページです。" />
-    <meta name="robots" content="noindex,nofollow" />
+    <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="./styles.css" />
     <style>
       .test-banner {
@@ -132,7 +132,7 @@
     </style>
   </head>
   <body>
-    <div class="test-banner">テスト版・確認用ページです（未公開／関係者確認用）</div>
+    <div class="test-banner">テスト公開中（お問い合わせフォーム確認用）</div>
     <header class="site-header">
       <a class="brand" href="./index.html" aria-label="JeSU Osaka ホーム">
         <img src="./assets/logo.png" alt="JeSU Osaka" />
@@ -182,24 +182,22 @@
             <p class="eyebrow">Contact Form</p>
             <h2>お問い合わせフォーム</h2>
             <p class="form-lead">下記に入力して「送信する」を押してください。担当が確認し、順次ご返信します。（<span style="color:var(--red);font-weight:800;">*</span> は必須項目）</p>
-            <form class="native-form" action="https://formsubmit.co/info@package-inc.com" method="POST">
-              <input type="hidden" name="_subject" value="【JeSU大阪サイト】お問い合わせが届きました" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://entry-package.github.io/jesu-osaka-test-site/thanks.html" />
-              <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <form class="native-form" action="https://script.google.com/macros/s/AKfycbzG_WbEgV6ihywAw5JXol_EaWK9qaqVOaus-to4PSnBfRuxeHs3QhpPR9fI07xUTxTERg/exec" method="post" target="contact-submit-frame" onsubmit="window.contactFormSubmitted = true">
 
               <label>お名前 <span class="req">*</span>
-                <input type="text" name="お名前" required />
+                <input type="text" name="name" autocomplete="name" required />
               </label>
               <label>ご所属（会社・学校・団体名）
-                <input type="text" name="ご所属" />
+                <input type="text" name="organization" autocomplete="organization" />
               </label>
               <label>メールアドレス <span class="req">*</span>
-                <input type="email" name="email" required />
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>電話番号
+                <input type="tel" name="phone" autocomplete="tel" />
               </label>
               <label>お問い合わせの種類 <span class="req">*</span>
-                <select name="お問い合わせの種類" required>
+                <select name="category" required>
                   <option value="" disabled selected>選択してください</option>
                   <option>講演・セミナーの依頼</option>
                   <option>後援・協力の依頼</option>
@@ -210,12 +208,14 @@
                 </select>
               </label>
               <label>お問い合わせ内容 <span class="req">*</span>
-                <textarea name="お問い合わせ内容" required></textarea>
+                <textarea name="message" required></textarea>
               </label>
               <div class="form-submit">
                 <button type="submit" class="button primary">送信する</button>
               </div>
             </form>
+            <p class="form-lead" id="contact-form-message" hidden>お問い合わせを受け付けました。確認後にご連絡します。</p>
+            <iframe name="contact-submit-frame" title="お問い合わせ送信結果" style="display: none" onload="if (window.contactFormSubmitted) window.location.href = './contact-thanks.html'"></iframe>
           </div>
 
           <aside class="contact-routes" aria-label="その他の窓口">
